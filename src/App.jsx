@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Analytics } from '@vercel/analytics/react'
 import { portfolio } from './data'
 import heroArt from './assets/data-landscape.png'
+import zoubidaPortrait from './assets/zoubida-professional-v2.png'
 import './App.css'
 
 const Arrow = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
@@ -47,6 +48,13 @@ function App() {
               <button className="primary-link" onClick={() => go('impact')}>Découvrir mon impact <Arrow /></button>
             </div>
           </div>
+          <figure className="hero-portrait-card">
+            <img src={zoubidaPortrait} alt="Portrait professionnel de Zoubida Lotfi" />
+            <figcaption>
+              <span>Zoubida Lotfi</span>
+              <small>Data Project Manager</small>
+            </figcaption>
+          </figure>
           <div className="hero-note"><b>DATA IN MOTION</b><span>Stratégie</span><span>Gouvernance</span><span>Delivery</span></div>
           <p className="scroll-cue">SCROLL TO EXPLORE <span>↓</span></p>
         </section>
