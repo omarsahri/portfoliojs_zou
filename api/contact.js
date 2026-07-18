@@ -65,7 +65,7 @@ export default async function handler(req, res) {
     for await (const chunk of req) chunks.push(chunk)
     const raw = Buffer.concat(chunks).toString()
     body = raw ? JSON.parse(raw) : {}
-  } catch (e) {
+  } catch {
     return res.status(400).json({ error: 'Invalid JSON' })
   }
 
