@@ -39,7 +39,7 @@ function App() {
         <section className="hero" id="home">
           <div className="hero-personal-copy">
             <p className="hero-hello"><span aria-hidden="true">✦</span> Bonjour, je suis</p>
-            <h1><span>Zoubida</span><em>Lotfi.</em></h1>
+            <h1><span>Zoubida</span>{' '}<em>Lotfi.</em></h1>
             <div className="hero-role-line">
               <p>Data Project Manager</p>
               <span>Basée à Paris<br />Expérience internationale</span>
