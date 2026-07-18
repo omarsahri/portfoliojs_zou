@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="site-shell">
       <header className="topbar">
-        <button className="brand" onClick={() => go('home')} aria-label="Retour à l’accueil"><span>{portfolio.initials}</span><small>DATA · DELIVERY · IMPACT</small></button>
+        <button className="brand" onClick={() => go('home')} aria-label="Retour à l’accueil"><span>{portfolio.initials}</span><small>Zoubida Lotfi<br />Portfolio</small></button>
         <nav className={menuOpen ? 'nav open' : 'nav'} aria-label="Navigation principale">
           <button onClick={() => go('impact')}>Impact</button>
           <button onClick={() => go('experience')}>Parcours</button>
@@ -37,18 +37,31 @@ function App() {
 
       <main>
         <section className="hero" id="home">
-          <img className="hero-art" src={heroArt} alt="" />
-          <div className="hero-grid" aria-hidden="true" />
-          <div className="hero-copy">
-            <p className="eyebrow"><span>01</span> Data Project Manager · Paris</p>
-            <h1>Faire circuler<br />la donnée.<br /><em>Créer l’impact.</em></h1>
-            <p className="hero-summary">{portfolio.summary}</p>
+          <div className="hero-personal-copy">
+            <p className="hero-hello"><span aria-hidden="true">✦</span> Bonjour, je suis</p>
+            <h1><span>Zoubida</span><em>Lotfi.</em></h1>
+            <div className="hero-role-line">
+              <p>Data Project Manager</p>
+              <span>Basée à Paris<br />Expérience internationale</span>
+            </div>
+            <p className="hero-summary">Je pilote des projets data complexes et transforme les besoins métier en produits fiables, utiles et prêts à passer à l’échelle.</p>
             <div className="hero-actions">
-              <button className="primary-link" onClick={() => go('impact')}>Découvrir mon impact <Arrow /></button>
+              <button className="primary-link" onClick={() => go('experience')}>Voir mon parcours <Arrow /></button>
+              <button className="secondary-link" onClick={() => go('impact')}>À propos de moi</button>
             </div>
           </div>
-          <div className="hero-note"><b>DATA IN MOTION</b><span>Stratégie</span><span>Gouvernance</span><span>Delivery</span></div>
-          <p className="scroll-cue">SCROLL TO EXPLORE <span>↓</span></p>
+          <div className="hero-personal-visual">
+            <div className="hero-art-frame">
+              <img className="hero-art" src={heroArt} alt="Visualisation abstraite de flux de données internationaux" />
+              <span className="visual-index">PORTFOLIO / 2026</span>
+              <div className="visual-monogram" aria-hidden="true">ZL</div>
+            </div>
+            <div className="personal-proof">
+              <span>En ce moment</span>
+              <p>Je sécurise la qualité et le delivery d’un datamart international de près de <strong>40M d’entreprises.</strong></p>
+            </div>
+          </div>
+          <p className="scroll-cue">DÉCOUVRIR MON PORTFOLIO <span>↓</span></p>
         </section>
 
         <section className="intro section" id="impact">
